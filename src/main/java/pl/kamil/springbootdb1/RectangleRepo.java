@@ -15,5 +15,5 @@ public interface RectangleRepo extends CrudRepository<Rectangle, Long> {
 
     @Query(nativeQuery = true, value = "SELECT * FROM RECTANGLE rect WHERE (2*rect.height + 2*rect.width) < :size")
     List<Rectangle> getSmallRectangles(@Param("size") int size);*/
-
+    //
 }
