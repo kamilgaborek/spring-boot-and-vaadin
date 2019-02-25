@@ -10,22 +10,24 @@ public class Rectangle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
     private int height;
     private int width;
 
-    public Rectangle(){};
+    public Rectangle() {
+    }
 
     public Rectangle(int height, int width) {
         this.height = height;
         this.width = width;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,8 +47,14 @@ public class Rectangle {
         this.width = width;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "id=" + id +
+                ", height=" + height +
+                ", width=" + width +
+                '}';
+    }
 }
 
 
